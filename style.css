@@ -3,18 +3,57 @@
     }
 
 body{
+    /*FOR DEBUG*/
     /* box-sizing: border-box;
     outline: 1px solid limegreen !important;
-    background: rgb(0 100 0 / 0.1); */
-    font-family: 'Poppins', sans-serif;
+    background: rgb(0 100 0 / 0.1);
+    font-family: 'Poppins', sans-serif; */
     font-weight: 200;
-    
+}
+
+.container{
+    margin-top: 2%;
+}
+
+header{
+    margin: auto;
+    width: 30em;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+#title{
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+#title-bold{
+    font-weight: 600;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-content{
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19);
+    padding: 1.5em;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.describe{
+    margin-bottom: 2em;
+}
+
+svg{
+    align-self: flex-end;
 }
 
 .cyan-card{
@@ -38,18 +77,38 @@ body{
     font-weight: 600;
 }
 
-footer{
-    background-color: #F3F3F3;
-    /* padding-top: 10px; */
-    padding-bottom: 0;
+@media screen and (max-width:1170px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .middle{
+        display: flex;
+    }
 }
 
 
-@media screen and (max-width:414px){
+@media screen and (min-width:760px){
+    .card-content{
+        width: 20em;
+    }
+}
+
+
+@media screen and (max-width:760px){
     .container{
         width: 80%;
         margin: auto;
         margin-top: 50px;
+    }
+
+    header{
+        width: 100%;
+    }
+
+    main{
+        display: block;
     }
 
     #title{
@@ -75,6 +134,9 @@ footer{
         display: flex;
         flex-direction: column;
         padding: 1.5em;
+    }
+    .middle{
+        display: block;
     }
     
     svg{
